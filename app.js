@@ -56,8 +56,8 @@ for (let index = 0; index < Math.trunc(maxFlowers / 3); index++) {
   flower.style.transform = `scaleX(${randSign()}) rotate(${
     Math.random() * 20
   }deg)`;
-  flower.style.animation = `6s ease ${-Math.random() * 2}s glow infinite`;
-
+  flower.style.animation = `6s ease glow infinite`;
+  //${-Math.random() * 2}s
   let pos = rngPos(vw, vh, flower.height, flower.height);
   allFlowers.push(pos);
   flower.style.top = pos.y + "px";
