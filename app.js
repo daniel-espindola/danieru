@@ -44,19 +44,19 @@ const vh = Math.max(
   window.innerHeight || 0
 );
 
-let maxFlowers = (vw / 128) * (vh / 128);
+let fheight = 64;
+let maxFlowers = ((vw / fheight) * (vh / fheight)) / 4;
 
-for (let index = 0; index < Math.trunc(maxFlowers); index++) {
+for (let index = 0; index < Math.trunc(maxFlowers / 3); index++) {
   console.log(maxFlowers);
   let flower = document.createElement("img");
   flower.src = "lunar-tear.png";
   flower.alt = "lunar tear from the nier game series";
-  flower.height = 64;
-  flower.style.opacity = Math.random() * 0.2 + 0.8;
+  flower.height = fheight;
   flower.style.transform = `scaleX(${randSign()}) rotate(${
     Math.random() * 20
   }deg)`;
-  flower.style.animation = `5s ease ${-Math.random() * 2}s glow infinite`;
+  flower.style.animation = `6s ease ${-Math.random() * 2}s glow infinite`;
 
   let pos = rngPos(vw, vh, flower.height, flower.height);
   allFlowers.push(pos);
