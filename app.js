@@ -44,24 +44,33 @@ const vh = Math.max(
   window.innerHeight || 0
 );
 
-let fheight = 64;
+let fheight = 48;
 let maxFlowers = ((vw / fheight) * (vh / fheight)) / 4;
 
-for (let index = 0; index < Math.trunc(maxFlowers / 3); index++) {
+for (let index = 0; index < Math.trunc(maxFlowers / 2); index++) {
   console.log(maxFlowers);
   let flower = document.createElement("img");
+  flower.id = 'flower'
   flower.src = "lunar-tear.png";
   flower.alt = "lunar tear from the nier game series";
+  flower.classList.add('lunar')
   flower.height = fheight;
   flower.style.transform = `scaleX(${randSign()}) rotate(${
     Math.random() * 20
   }deg)`;
   flower.style.animation = `6s ease glow infinite`;
-  //${-Math.random() * 2}s
   let pos = rngPos(vw, vh, flower.height, flower.height);
   allFlowers.push(pos);
   flower.style.top = pos.y + "px";
   flower.style.left = pos.x + "px";
 
+
   document.body.appendChild(flower);
 }
+
+let flower = document.getElementById('flower')
+flower.addEventListener("click", () => {
+  let audio = document.getElementById('music');
+  audio.play();
+  audio.volume = 0.05;
+})

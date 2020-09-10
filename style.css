@@ -1,22 +1,38 @@
 body {
   background: black;
   overflow: hidden;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
-div {
-  width: 50vw;
-  height: 50vh;
-  margin: auto;
-  background: black;
+main {
+  background-color: #cccccc;
   z-index: 10;
+  width: 90vw;
+  max-width: 1024px;
+  height: 60vh;
+  max-height: 900px;
+  transition: ease .5s;
+  outline: rgba(255, 255, 255, 0.5) dashed 3px;
 }
+
+audio {
+  display: none;
+}
+
+main:hover {
+  transform: scale(1.005);
+}
+
 
 @keyframes glow {
   0% {
     opacity: 0.5;
   }
 
-  30%,
+  40%,
   60% {
     opacity: 1;
     /* background-color: rgba(255, 255, 255, 0.09); */
@@ -30,8 +46,17 @@ div {
   }
 }
 
-img {
+.lunar {
   position: absolute;
   border-radius: 50%;
   image-rendering: crisp-edges;
+}
+
+.pp {
+  width: 10rem;
+  border-radius: 50%;
+  border: dashed white 3px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%)
 }
