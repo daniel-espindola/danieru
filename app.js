@@ -31,6 +31,7 @@ const rngPos = (w, h, fw, fh) => {
     y,
   };
 };
+let clicks = 0;
 
 const randSign = () => {
   return Math.random() > 0.25 ? 1 : -1;
@@ -47,11 +48,11 @@ const vh = Math.max(
 );
 
 // Cálcula um número máximo de flores que seja garantido de caber na viewport sem colisões
-let fheight = 48;
+let fheight = 42;
 let maxFlowers = ((vw / fheight) * (vh / fheight)) / 4;
 
 // Popula a viewport com flores
-for (let index = 0; index < Math.trunc(maxFlowers); index++) {
+for (let index = 0; index < Math.trunc(maxFlowers / 1.5); index++) {
   let flower = document.createElement("img");
   flower.id = "flower";
   flower.src = "lunar-tear.png";
@@ -61,18 +62,26 @@ for (let index = 0; index < Math.trunc(maxFlowers); index++) {
   flower.style.transform = `scaleX(${randSign()}) rotate(${
     Math.random() * 20
   }deg)`;
-  flower.style.animation = `4s ease ${-Math.random() *.5}s glow infinite`;
+  flower.style.animation = `2s ease ${-Math.random() *2}s glow infinite`;
   let pos = rngPos(vw, vh, flower.height, flower.height);
   allFlowers.push(pos);
   flower.style.top = pos.y + "px";
   flower.style.left = pos.x + "px";
+  flower.addEventListener("click", () => {
+    clicks++;
+    flower.style.display = "none";
+    if (clicks == 5) {
+      let audio = document.getElementById('music');
+      audio.play();
+      audio.volume = 0.05;
+    }
+  });
   document.body.appendChild(flower);
 }
 
-//Coloca kaine salvation como evento do click de alguma flor
-let flower = document.getElementById('flower')
-flower.addEventListener("click", () => {
-  let audio = document.getElementById('music');
-  audio.play();
-  audio.volume = 0.05;
-})
+const popup = (param) => {
+  let popup = document.getElementById(param)
+  popup.classList.toggle('show')
+}
+
+console.log("inspirado por: anabastos.me");
