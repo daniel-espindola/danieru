@@ -92,10 +92,15 @@ article {
   margin-top: 6rem;
 }
 
+.title h2 {
+  margin-top: 1rem;
+}
+
 .perks {
   text-align: center;
   line-height: 2rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  color: #666666
 }
 
 .social {
