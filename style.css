@@ -63,6 +63,12 @@ main:hover {
   }
 }
 
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
 .title {
   margin-top: 6rem;
   color: #777777;

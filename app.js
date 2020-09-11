@@ -51,8 +51,7 @@ const vh = Math.max(
 let fheight = 42;
 let maxFlowers = ((vw / fheight) * (vh / fheight)) / 4;
 
-// Popula a viewport com flores
-for (let index = 0; index < Math.trunc(maxFlowers / 1.5); index++) {
+const createFlower = () => {
   let flower = document.createElement("img");
   flower.id = "flower";
   flower.src = "lunar-tear.png";
@@ -61,21 +60,32 @@ for (let index = 0; index < Math.trunc(maxFlowers / 1.5); index++) {
   flower.height = fheight;
   flower.style.transform = `scaleX(${randSign()}) rotate(${
     Math.random() * 20
-  }deg)`;
-  flower.style.animation = `2s ease ${-Math.random() *2}s glow infinite`;
+    }deg)`;
+  flower.style.animation = `2s ease ${-Math.random() * 2}s glow infinite`;
   let pos = rngPos(vw, vh, flower.height, flower.height);
   allFlowers.push(pos);
   flower.style.top = pos.y + "px";
   flower.style.left = pos.x + "px";
-  flower.addEventListener("click", () => {
+  flower.addEventListener("click", (ev) => {
+    ev.target.style.transform = '';
+    ev.target.style.opacity = 1;
+    ev.target.style.animation = 'spin 2s linear infinite';
     clicks++;
-    flower.style.display = "none";
+    let flower = createFlower();
+    document.body.appendChild(flower);
     if (clicks == 5) {
       let audio = document.getElementById('music');
       audio.play();
       audio.volume = 0.05;
     }
   });
+
+  return flower;
+}
+
+// Popula a viewport com flores
+for (let index = 0; index < Math.trunc(maxFlowers / 1.5); index++) {
+  let flower = createFlower()
   document.body.appendChild(flower);
 }
 
