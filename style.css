@@ -125,3 +125,21 @@ article {
   color: #222222;
   transform: scale(1.02)
 }
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .perks {
+    line-height: 1.25rem;
+  }
+
+  .social-icon {
+    font-size: 1.5rem;
+  }
+}
