@@ -1,3 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
 body {
   background: black;
   overflow: hidden;
@@ -8,7 +22,7 @@ body {
 }
 
 main {
-  background-color: #cccccc;
+  background-color: white;
   z-index: 10;
   width: 90vw;
   max-width: 1024px;
@@ -16,6 +30,7 @@ main {
   max-height: 900px;
   transition: ease .5s;
   outline: rgba(255, 255, 255, 0.5) dashed 3px;
+  opacity: 0.95;
 }
 
 audio {
@@ -23,7 +38,7 @@ audio {
 }
 
 main:hover {
-  transform: scale(1.005);
+  opacity: .97;
 }
 
 
@@ -40,7 +55,6 @@ main:hover {
       0 -5px 35px 17px rgba(255, 255, 255, 0.045);
   }
 
-
   100% {
     opacity: 0.5;
   }
@@ -55,8 +69,54 @@ main:hover {
 .pp {
   width: 10rem;
   border-radius: 50%;
-  border: dashed white 3px;
-  position: relative;
+  border: dashed black 3px;
+  position: absolute;
   left: 50%;
   transform: translate(-50%, -50%)
+}
+
+section {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+article {
+  text-align: center;
+}
+
+.title {
+  margin-top: 6rem;
+}
+
+.perks {
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.25rem;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.social a {
+  text-decoration: none;
+}
+
+.social-icon {
+  color: #555555;
+  font-size: 2rem;
+  transition: ease .5s;
+  margin: 0 1rem;
+}
+
+.social-icon:hover {
+  color: #222222;
+  transform: scale(1.02)
 }
