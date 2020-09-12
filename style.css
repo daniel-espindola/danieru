@@ -40,7 +40,7 @@ main {
   height: 65vh;
   max-height: 900px;
   transition: ease 0.5s;
-  outline: rgba(255, 255, 255, 0.5) dashed 3px;
+  border: rgba(0, 0, 0, 1) dashed 3px;
   opacity: 0.97;
 }
 
@@ -75,6 +75,17 @@ main:hover {
   }
 }
 
+@keyframes switch-border {
+
+  0% {
+    border-color: white;
+  }
+
+  100% {
+    border-color: black;
+  }
+}
+
 .title {
   margin-top: 6rem;
   color: black;
@@ -92,6 +103,10 @@ main:hover {
   margin-top: 0.5rem;
 }
 
+.title i {
+  font-size: 1.25rem;
+}
+
 .lunar {
   position: absolute;
   border-radius: 50%;
@@ -101,10 +116,19 @@ main:hover {
 .pp {
   width: 10rem;
   border-radius: 50%;
-  border: dashed black 3px;
+  border: dashed black 4px;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+
+.pp:hover {
+  border: dashed white 4px;
+}
+
+.white {
+  border-color: white;
 }
 
 section {
@@ -124,19 +148,11 @@ article {
   text-align: left;
   align-self: center;
   line-height: 1.75rem;
-  font-size: 0.75rem;
+  font-size: 0.80rem;
   letter-spacing: 1px;
   font-family: "Oswald", sans-serif;
   font-weight: 300;
   color: #555555;
-}
-
-.projects a {
-  color: #333333;
-  font-family: var(--ff-secondary);
-  font-weight: 700;
-  font-size: 1.25rem;
-  transform: translate(-50%, 0);
 }
 
 .perks i {

@@ -61,7 +61,7 @@ const createFlower = () => {
   flower.style.transform = `scaleX(${randSign()}) rotate(${
     Math.random() * 20
     }deg)`;
-  flower.style.animation = `2s ease ${-Math.random() * 2}s glow infinite`;
+  flower.style.animation = `2.5s ease ${-Math.random() * 2.5}s glow infinite`;
   let pos = rngPos(vw, vh, flower.height, flower.height);
   allFlowers.push(pos);
   flower.style.top = pos.y + "px";
@@ -93,5 +93,11 @@ const popup = (param) => {
   let popup = document.getElementById(param)
   popup.classList.toggle('show')
 }
+
+// let pp = document.getElementById('pp');
+
+// setInterval(function () {
+//   pp.classList.toggle('white')
+// }, 1000);
 
 console.log("inspirado por: anabastos.me");
