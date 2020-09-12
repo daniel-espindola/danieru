@@ -200,12 +200,11 @@ article {
   }
 
   .perks {
-    line-height: 1.25rem;
+    line-height: 1.5rem;
   }
 
   .perks i {
-    color: black;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-right: 0.5rem;
   }
 
