@@ -40,7 +40,7 @@ main {
   height: 65vh;
   max-height: 900px;
   transition: ease 0.5s;
-  border: rgba(0, 0, 0, 1) dashed 3px;
+  border: black dashed 4px;
   opacity: 0.97;
 }
 
@@ -76,7 +76,6 @@ main:hover {
 }
 
 @keyframes switch-border {
-
   0% {
     border-color: white;
   }
@@ -148,7 +147,7 @@ article {
   text-align: left;
   align-self: center;
   line-height: 1.75rem;
-  font-size: 0.80rem;
+  font-size: 0.8rem;
   letter-spacing: 1px;
   font-family: "Oswald", sans-serif;
   font-weight: 300;
