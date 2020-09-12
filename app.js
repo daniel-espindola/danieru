@@ -48,7 +48,7 @@ const vh = Math.max(
 );
 
 // Cálcula um número máximo de flores que seja garantido de caber na viewport sem colisões
-let fheight = 42;
+let fheight = 36;
 let maxFlowers = ((vw / fheight) * (vh / fheight)) / 4;
 
 const createFlower = () => {
@@ -84,7 +84,7 @@ const createFlower = () => {
 }
 
 // Popula a viewport com flores
-for (let index = 0; index < Math.trunc(maxFlowers / 2); index++) {
+for (let index = 0; index < Math.trunc(maxFlowers / 1.5); index++) {
   let flower = createFlower()
   document.body.appendChild(flower);
 }
