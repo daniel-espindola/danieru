@@ -1,9 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;300;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  /*colors*/
+  --clr-primary: #536851;
+  --clr-primary-light: #6e8e69;
+
+  /*fonts*/
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Grand Hotel", cursive;
 }
 
 h1 {
@@ -21,8 +31,7 @@ body {
   place-items: center;
   height: 100vh;
   width: 100vw;
-  font-family: 'Roboto',
-    sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 main {
@@ -32,7 +41,7 @@ main {
   max-width: 1100px;
   height: 65vh;
   max-height: 900px;
-  transition: ease .5s;
+  transition: ease 0.5s;
   outline: rgba(255, 255, 255, 0.5) dashed 3px;
   opacity: 0.95;
 }
@@ -44,7 +53,6 @@ audio {
 main:hover {
   opacity: 1;
 }
-
 
 @keyframes glow {
   0% {
@@ -71,7 +79,7 @@ main:hover {
 
 .title {
   margin-top: 6rem;
-  color: #777777;
+  color: #333333;
 }
 
 .title h1 {
@@ -80,7 +88,7 @@ main:hover {
 }
 
 .title h2 {
-  font-weight: 300;
+  font-weight: 400;
   margin-top: 1rem;
 }
 
@@ -96,7 +104,7 @@ main:hover {
   border: dashed black 3px;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
 }
 
 section {
@@ -112,30 +120,41 @@ article {
   text-align: center;
 }
 
-
-
-
-
 .perks {
   text-align: left;
   align-self: center;
   line-height: 1.75rem;
-  font-size: 1rem;
-  font-weight: 100;
-  color: #666666
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #777777;
 }
 
 .perks i {
-  color: black;
-  font-size: 1.5rem;
-  margin-right: 2rem;
+  font-size: 1.25rem;
+  margin-right: 1.5rem;
+  vertical-align: middle;
+  color: #555555;
 }
 
 .social {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 0 4rem;
+  position: relative;
+}
+
+.social h4 {
+  position: absolute;
+  font-weight: 300;
+  color: black;
+  text-transform: lowercase;
+  font-size: 0.75rem;
+  top: -25px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .social a {
@@ -143,18 +162,17 @@ article {
 }
 
 .social-icon {
-  color: #555555;
+  color: #444444;
   font-size: 2.5rem;
-  transition: ease .5s;
-  margin: 0 1rem;
+  transition: ease 0.5s;
 }
 
 .social-icon:hover {
-  color: #222222;
-  transform: scale(1.02)
+  color: black;
+  transform: scale(1.06);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 580px) {
   h1 {
     font-size: 1.5rem;
   }
@@ -174,16 +192,17 @@ article {
   .perks i {
     color: black;
     font-size: 1.5rem;
-    margin-right: .5rem;
+    margin-right: 0.5rem;
   }
 
+  .social {
+    padding: 0 1.25rem;
+  }
 
   .social-icon {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
-
-
 
 /* POPUP */
 .popup {
@@ -225,7 +244,7 @@ article {
 .popup .show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
+  animation: fadeIn 1s;
 }
 
 /* Add animation (fade in the popup) */

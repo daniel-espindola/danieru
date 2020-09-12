@@ -84,7 +84,7 @@ const createFlower = () => {
 }
 
 // Popula a viewport com flores
-for (let index = 0; index < Math.trunc(maxFlowers / 1.5); index++) {
+for (let index = 0; index < Math.trunc(maxFlowers / 2); index++) {
   let flower = createFlower()
   document.body.appendChild(flower);
 }
