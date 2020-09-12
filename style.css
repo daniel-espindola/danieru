@@ -18,10 +18,6 @@
   --ff-secondary: "Amatic SC", cursive;
 }
 
-h1 {
-  font-size: 2rem;
-}
-
 ul {
   list-style-type: none;
 }
@@ -81,18 +77,18 @@ main:hover {
 
 .title {
   margin-top: 6rem;
-  color: #111111;
+  color: black;
   font-family: var(--ff-secondary);
 }
 
 .title h1 {
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2.75rem;
 }
 
 .title h2 {
   font-weight: 400;
-  font-size: 1.75rem;
+  font-size: 2rem;
   margin-top: 0.5rem;
 }
 
@@ -132,11 +128,11 @@ article {
   letter-spacing: 1px;
   font-family: "Oswald", sans-serif;
   font-weight: 300;
-  color: #666666;
+  color: #555555;
 }
 
 .projects a {
-  color: #444444;
+  color: #333333;
   font-family: var(--ff-secondary);
   font-weight: 700;
   font-size: 1.25rem;
@@ -186,13 +182,24 @@ article {
   transform: scale(1.06);
 }
 
-@media screen and (max-width: 580px) {
-  h1 {
-    font-size: 1.5rem;
+@media screen and (max-height: 750px) {
+  main {
+    height: 75vh;
   }
 
-  h2 {
-    font-size: 1.25rem;
+  .title {
+    margin-top: 5rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .title h1 {
+    font-size: 2rem;
+  }
+
+  .title h2 {
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
   }
 
   section {
