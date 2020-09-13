@@ -1,114 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>danieru</title>
-    <!-- FAVICON -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
-    <!-- CSS -->
-    <link
-      rel="stylesheet"
-      href="./fontawesome-free-5.12.1-web/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <main>
-      <img src="pp.jpg" alt="foto de perfil" id="pp" class="pp" />
-      <section class="info">
-        <article class="title">
-          <h1>Daniel Espindola da Silva</h1>
-          <h2>
-            Software Developer
-            <i class="fas fa-fw fa-bug"></i>
-          </h2>
-        </article>
-        <article class="perks">
-          <ul>
-            <li>
-              <i class="fas fa-fw fa-envelope"></i
-              >espindola.daniel@outlook.com.br
-            </li>
-            <li>
-              <i class="fas fa-fw fa-graduation-cap"></i>Computer Science
-              Undergrad
-            </li>
-            <li><i class="fas fa-fw fa-hourglass-start"></i>21 years old</li>
-            <li><i class="fas fa-fw fa-home"></i>São Paulo, Brazil</li>
-            <li><i class="fas fa-fw fa-code"></i>Javascript, NodeJS, Python</li>
-            <li>
-              <i class="fas fa-fw fa-gamepad"></i>Interests: programming, anime,
-              games
-            </li>
-          </ul>
-        </article>
-        <article class="social">
-          <h4>feel free to talk to me anytime :)</h4>
-          <a
-            href="https://github.com/daniel-espindola"
-            target="_blank"
-            class="social-icon"
-          >
-            <i class="fab fa-fw fa-github"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/daniel-espindola/"
-            target="_blank"
-            class="social-icon"
-          >
-            <i class="fab fa-fw fa-linkedin"></i>
-          </a>
-          <a
-            href="https://twitter.com/nierdanieru"
-            target="_blank"
-            class="social-icon"
-          >
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" onclick="popup('discord')" class="social-icon popup">
-            <span class="popuptext" id="discord">daniel.e#2809</span>
-            <i class="fab fa-fw fa-discord"></i>
-          </a>
-          <a href="#" onclick="popup('ts')" class="social-icon popup">
-            <span class="popuptext" id="ts"
-              >Servidor: ts.kazuts.com<br />apelido:danieru</span
-            >
-            <i class="fab fa-fw fa-teamspeak"></i>
-          </a>
-          <a
-            href="https://steamcommunity.com/profiles/76561198166507062/"
-            target="_blank"
-            class="social-icon"
-          >
-            <i class="fab fa-fw fa-steam"></i>
-          </a>
-        </article>
-      </section>
-    </main>
-  </body>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177831523-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  <audio controls id="music">
-    <source src="kaine.mp3" type="audio/mpeg" />
-    Your browser does not support the audio element.
-  </audio>
-  <script src="app.js"></script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-177831523-1');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>danieru</title>
+  <!-- FAVICON -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./fontawesome-free-5.12.1-web/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main>
+    <img src="pp.jpg" alt="foto de perfil" id="pp" class="pp" />
+    <section class="info">
+      <article class="title">
+        <h1>Daniel Espindola da Silva</h1>
+        <h2>
+          Software Developer
+          <i class="fas fa-fw fa-bug"></i>
+        </h2>
+      </article>
+      <article class="perks">
+        <ul>
+          <li>
+            <i class="fas fa-fw fa-envelope"></i>espindola.daniel@outlook.com.br
+          </li>
+          <li>
+            <i class="fas fa-fw fa-graduation-cap"></i>Computer Science
+            Undergrad
+          </li>
+          <li><i class="fas fa-fw fa-hourglass-start"></i>21 years old</li>
+          <li><i class="fas fa-fw fa-home"></i>São Paulo, Brazil</li>
+          <li><i class="fas fa-fw fa-code"></i>Javascript, NodeJS, Python</li>
+          <li>
+            <i class="fas fa-fw fa-gamepad"></i>Interests: programming, anime,
+            games
+          </li>
+        </ul>
+      </article>
+      <article class="social">
+        <h4>feel free to talk to me anytime :)</h4>
+        <a href="https://github.com/daniel-espindola" target="_blank" class="social-icon">
+          <i class="fab fa-fw fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/daniel-espindola/" target="_blank" class="social-icon">
+          <i class="fab fa-fw fa-linkedin"></i>
+        </a>
+        <a href="https://twitter.com/nierdanieru" target="_blank" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" onclick="popup('discord')" class="social-icon popup">
+          <span class="popuptext" id="discord">daniel.e#2809</span>
+          <i class="fab fa-fw fa-discord"></i>
+        </a>
+        <a href="#" onclick="popup('ts')" class="social-icon popup">
+          <span class="popuptext" id="ts">Servidor: ts.kazuts.com<br />apelido:danieru</span>
+          <i class="fab fa-fw fa-teamspeak"></i>
+        </a>
+        <a href="https://steamcommunity.com/profiles/76561198166507062/" target="_blank" class="social-icon">
+          <i class="fab fa-fw fa-steam"></i>
+        </a>
+      </article>
+    </section>
+  </main>
+</body>
+
+<audio controls id="music">
+  <source src="kaine.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+<script src="app.js"></script>
+
 </html>

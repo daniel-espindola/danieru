@@ -197,6 +197,13 @@ article {
   transform: scale(1.06);
 }
 
+@media screen and (max-height: 500px) {
+  main {
+    height: 120vh;
+  }
+
+}
+
 @media screen and (max-height: 750px) {
   main {
     height: 75vh;
